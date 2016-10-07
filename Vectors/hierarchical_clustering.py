@@ -31,7 +31,7 @@ def hierarchy_draw(Z, labels, level):
     pp = PdfPages('short_dendogramm.pdf')
     fig.savefig(pp, format='pdf')
     pp.close()
-'''
+
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--distance", required = True, 
                     help = ("Choose distance metric: 'cosine', 'jaccard', " +
@@ -50,7 +50,7 @@ metric = args['distance']
 '''
 metric = 'cosine'
 cl_method = 'average'
-
+'''
 if cl_method not in methods:
     print('Error: You chould choose one of the following methods: \n' +
           "'single', 'complete', 'average', 'weighted'")
