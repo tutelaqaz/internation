@@ -39,13 +39,13 @@ def terms_distance_table(metric, words_bag, start):
 
 #добавление словаря слов их совстречаемости по 2 колонке в таблице       
     for ind, word in enumerate(words_in_row2):
-        ind = words_in_row2.index(word)
         if word not in vectors_list:   
             vectors_list[word] = {words_in_row1[ind]:occurence[ind]}
         else:
             word_dic = vectors_list[word]
             word_dic[words_in_row1[ind]] = occurence[ind]
             vectors_list[word] = word_dic
+
 
     print('Evaluation time: {}'.format((time()-start)))
     
